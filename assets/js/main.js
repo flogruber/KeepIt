@@ -31,8 +31,8 @@ jQuery(function($) {
 
     _Blog.toggleTheme = function() {
         const currentTheme = window.localStorage && window.localStorage.getItem('theme')
-        const isDark = currentTheme === 'dark'
-        $('body').toggleClass('dark-theme', isDark)
+        const isLight = currentTheme === 'light'
+        $('body').toggleClass('dark-theme', !isLight)
         $('.theme-switch').on('click', () => {
             $('body').toggleClass('dark-theme')
             window.localStorage &&
